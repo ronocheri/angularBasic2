@@ -1,0 +1,17 @@
+<p>root works!</p>
+<!-- <app-items ></app-items>
+<button [innerText]="onOffBtnText" >Show/Hide</button> -->
+
+<button [innerText]="onOffBtnText" (click)="showHideList()" >Show/Hide</button>
+
+<input
+type="checkbox"
+(click)="showHideList()"
+[checked]="isListPresented"
+/>test
+<br>
+<input
+[(ngModel)]="isListPresented"
+/>test2
+
+<app-items [hidden]="!isListPresented"></app-items>
